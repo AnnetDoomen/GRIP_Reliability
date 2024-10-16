@@ -24,10 +24,10 @@ import os
 # General project settings.
 # More specific settings can be found in the config_file.
 settings = {
-    'PAIN_SCORES': True,
-    'RESULTS_2HOURS': True,
+    'PAIN_SCORES': False,
+    'RESULTS_2HOURS': False,
     'VERBOSE': True,
-    'VISUALISE': False,
+    'VISUALISE': True,
     'RAW_DATA_DIR': 'data/raw_data',
     'CONFIG_DIR': 'config'
 }
@@ -60,7 +60,7 @@ def main():
                     f'data/raw_data/{subject}/pain_score/{subject}_pain_score.csv', index_col=0)
 
             days = os.listdir(f"{settings['RAW_DATA_DIR']}/{subject}")
-            days.remove('pain_score')
+            # days.remove('pain_score')
 
             # Loop over days
             for day in days:
@@ -135,7 +135,7 @@ def main():
                             if settings['PAIN_SCORES']:
                                 try:
                                     results = characteristics_pain(
-                                        painscores, results, day, time=f'{key.split('_')[0]}:00')
+                                        painscores, results, day, time=f"{key.split('_')[0]}:00")
                                 except Exception as e:
                                     logging.error(f'pain: {subject} {day} {e}')
 

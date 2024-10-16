@@ -22,8 +22,6 @@ google-pasta==0.2.0
 grpcio==1.65.1
 h5py==3.11.0
 idna==3.7
-ipykernel==6.29.4
-ipython==8.25.0
 jedi==0.19.1
 joblib==1.4.2
 jupyter_client==8.6.2
@@ -97,4 +95,3 @@ wcwidth==0.2.13
 Werkzeug==3.0.3
 wheel==0.44.0
 wrapt==1.16.0
-xarray==2024.9.0

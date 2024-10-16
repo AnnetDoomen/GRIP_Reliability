@@ -62,8 +62,7 @@ def split_data(data_df, begintime, endtime, config):
             (start - begintime).seconds * config['frequency'])
         sample_end = int(
             (end - begintime).seconds * config['frequency'])
-        data_df.loc[sample_start:sample_end, 'time_2hours'] = f'{
-            start.hour}_{end.hour}'
+        data_df.loc[sample_start:sample_end, 'time_2hours'] = f'{start.hour}_{end.hour}'
     return data_df
 
 
